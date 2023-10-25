@@ -8,8 +8,18 @@ import IntroListPage from "@/components/pages/IntroListPage";
 import PostPage from "@/components/pages/PostPage";
 const routes = [
   { path: "/", name: "HomePage", component: HomePage },
-  { path: "/register", name: "RegisterPage", component: RegisterPage },
-  { path: "/login", name: "LoginPage", component: LoginPage },
+  {
+    path: "/register",
+    name: "RegisterPage",
+    component: RegisterPage,
+    meta: { hideSidebar: true, hideHeader: true },
+  },
+  {
+    path: "/login",
+    name: "LoginPage",
+    component: LoginPage,
+    meta: { hideSidebar: true, hideHeader: true },
+  },
   { path: "/index/:Index", name: "IndexListPage", component: IndexListPage },
   { path: "/intro/:Intro", name: "IntroListPage", component: IntroListPage },
   { path: "/intro/:Intro/post/:Post", name: "PostPage", component: PostPage },
